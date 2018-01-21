@@ -1,2 +1,9 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h1>¡Bienvenido!</h1>
+<h3>Actividades Registradas</h3>
+
+<% @taks.each do |task| %>
+	<h2><%= link_to task.description, task %></h2>
+	<p><%= art.created_at.strftime("%d-%m-%Y") %></p>
+<% end %>
+
+<%= will_paginate @articles %>

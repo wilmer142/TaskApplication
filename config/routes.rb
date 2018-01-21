@@ -1,18 +1,21 @@
 Rails.application.routes.draw do
   
   #Routes for users
-  Rails.application.routes.draw do
-    devise_for :users, controllers: {
-      :sessions => 'users/sessions',
-      :registrations => "users/registrations",
-      :passwords => "users/passwords"
-    }
-  end
+  #Rails.application.routes.draw do
+  #  devise_for :users, controllers: {
+  #    :sessions => 'users/sessions',
+  #    :registrations => "users/registrations",
+  #    :passwords => "users/passwords"
+  #  }
+  #end
+  devise_for :users
 
   #Routes for authenticated and authenticated users
   devise_scope :user do
-    authenticated :user do
-      root 'tasks#index'
+    authenticated do
+      authenticated :user do
+        root 'tasks#index'
+      end
     end
     unauthenticated do
       root 'devise/sessions#new', as: :unauthenticated_root
