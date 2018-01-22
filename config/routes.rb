@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   #Routes for authenticated and authenticated users
-
   devise_scope :user do
     authenticated do
       authenticated :user do

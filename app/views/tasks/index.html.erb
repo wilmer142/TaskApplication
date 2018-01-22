@@ -7,12 +7,14 @@
 	    <th>Descripción</th> 
 	    <th>Creado en</th>
 	    <th></th>
+	    <th></th>
 	  </tr>
 	  <% @tasks.each do |task| %>
 		  <tr>
 		    <td><%= task.description %></td>
 		    <td><%= task.created_at.strftime("%d-%m-%Y") %></td>
 		    <td><%= link_to "Actividades", task, class: "btn btn-default btn-sm" %></td>
+		    <td><%= link_to "Eliminar", task, method: :delete, data: {confirm: "¿Seguro que quieres eliminar la tarea? Las actividades asociadas tambien serán eliminadas"}, class: "btn btn-default btn-sm" %></td>
 		  </tr>
 	  <% end %>
 	</table>

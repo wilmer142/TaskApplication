@@ -22,7 +22,7 @@
         <%= f.text_area :description, class: "form-control" %>
       </div>
 
-      <div class="actions">
+      <div class="form-group">
         <%= f.submit "Agregar", class: "btn btn-primary" %>
       </div>
     <% end %>
@@ -31,6 +31,7 @@
 
 <script type="text/javascript">
   $(function () {
-  $("#datetimepicker1").datetimepicker();
+  $("#datetimepicker1").datetimepicker(
+    {format: 'DD-MM-YYYY'});
   });
 </script>

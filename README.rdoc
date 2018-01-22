@@ -1,28 +1,55 @@
-== README
+# TaskApplication
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Implementación de Ruby on Rails para administrar tareas y actividades
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* **Versión de ruby:** 2.4.0
+
+
+* **Versión de rails:** 5.0.6
+
+
+* **Dependencias:** 
+    * mySql (Base de datos)
+    * simple_form (Menejo de formularios)
+    * devise (Sistema de autenticación)
+    * bootstrap-sass (Implemtentacion de Bootstrap para rails)
+
+
+* **Configuración de Rails en windows:**
+    * $ se debe modificar el archivo database.yml ubicado en la carpeta config con el username y contraseña de la base de datos MYSQL a ejecutar el proyecto
+    * $ rake db:create (Crea la base de datos)
+    * $ rake db:migrate (Migra las tablas y campos a la base de datos)
+    * $ bundle install (Instala las gemas 'lebrerias' utilizadas en la implementación)
+    * $ rails s -b (host donde correrta el aplicatico) -p (puerto donde correra el aplicativo) -d (Corre como un proceso en el servidot)
+
+
+* **Antes de correr el proyecto:**
+    * $ se debe modificar el archivo database.yml ubicado en la carpeta config con el username y contraseña de la base de datos MYSQL a ejecutar el proyecto
+    * $ rake db:create (Crea la base de datos)
+    * $ rake db:migrate (Migra las tablas y campos a la base de datos)
+    * $ bundle install (Instala las gemas 'lebrerias' utilizadas en la implementación)
+    * $ rails s -b (host donde correrta el aplicatico) -p (puerto donde correra el aplicativo) -d (Corre como un proceso en el servidot)
+
+
+* **Documentación API:**
+    * Endpoint que regresa json de TODOS los preseleccionados /api/v1/preselecteds.json
+    * Endpoint que regresa json de la información de UN registrado /api/v1/preselecteds/[id].json
+    * Datos para la autentificación del API: user:admin, password:QazWsx1997.
+    * Ejemplo de petición con curl: curl http://localhost:3000/api/v1/ddgree_preselecteds.json -u 'admin:QazWsx1997'
+
+
+
+* **Formato documento de excel para la carga de pre-registrados:**
+    * primer campo de la primera fila: "Cedula"
+    * segundo campo de la primera fila: "Fondo"
+    * a partir de estos dos encabezados, llenar con los datos correspondientes
+
+
+* **Fecha de lanzamiento:** Junio 2017
+
+
+* **Lugar:** (Sapiencia) Medellín Colombia
+
+
+* **Contacto:** desarrolladores: informatica@sapiencia.gov.co (Wilmer Jaramillo), carlos.agudelo@sapiencia.gov.co (Carlos Agudelo), sebasdeldi@hotmail.com (Sebastian Delgado)

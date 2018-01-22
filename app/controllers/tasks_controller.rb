@@ -31,6 +31,13 @@ class TasksController < ApplicationController
   	@task = Task.find(params[:id])
   end
 
+  #Deleting a task and related activities
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to tasks_path, notice: :"Tarea eliminada correctamente"
+  end
+
   private
 
   	#Define validate argument for task
