@@ -1,7 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
 
 .navbar-default {
 	background-color: #C4D6E6;
 	border-color: #ADC2D4;
+}
+
+table, th {
+	text-align: center;
+}
+
+h1, h2 {
+	font-weight: bold;
 }

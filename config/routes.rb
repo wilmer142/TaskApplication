@@ -1,16 +1,10 @@
 Rails.application.routes.draw do
   
   #Routes for users
-  #Rails.application.routes.draw do
-  #  devise_for :users, controllers: {
-  #    :sessions => 'users/sessions',
-  #    :registrations => "users/registrations",
-  #    :passwords => "users/passwords"
-  #  }
-  #end
   devise_for :users
 
   #Routes for authenticated and authenticated users
+
   devise_scope :user do
     authenticated do
       authenticated :user do
@@ -23,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   #Routes for tasks and activities
-  resources :taks do
+  resources :tasks do
     resources :activities
   end
 

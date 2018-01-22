@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for([@task, @task.activities.build]) do |f| %>
+
+      <div class="form-group">
+        <%= f.label :end_date %><br>
+        <div class="input-group date" id="datetimepicker1">
+          <%= f.text_field :end_date, class: "form-control" %>
+          <span class="input-group-addon">
+            <span class="glyphicon glyphicon-calendar"></span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :hours %><br>
+        <%= f.text_field :hours, class: "form-control"%>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :description %><br>
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Agregar", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(function () {
+  $("#datetimepicker1").datetimepicker();
+  });
+</script>

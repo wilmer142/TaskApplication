@@ -1,9 +1,20 @@
-<h1>¡Bienvenido!</h1>
-<h3>Actividades Registradas</h3>
-
-<% @taks.each do |task| %>
-	<h2><%= link_to task.description, task %></h2>
-	<p><%= art.created_at.strftime("%d-%m-%Y") %></p>
-<% end %>
-
-<%= will_paginate @articles %>
+<div class="col-md-8">
+	<h1>¡Bienvenido!</h1>
+	<h3>Tareas Registradas </h3>
+	<br>
+	<table class="table table-hover">
+	  <tr>
+	    <th>Descripción</th> 
+	    <th>Creado en</th>
+	    <th></th>
+	  </tr>
+	  <% @tasks.each do |task| %>
+		  <tr>
+		    <td><%= task.description %></td>
+		    <td><%= task.created_at.strftime("%d-%m-%Y") %></td>
+		    <td><%= link_to "Actividades", task, class: "btn btn-default btn-sm" %></td>
+		  </tr>
+	  <% end %>
+	</table>
+	<%= link_to "Crear Tareas", new_task_path, class: "btn btn-primary" %>
+</div>

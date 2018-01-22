@@ -1,0 +1,21 @@
+<div class="col-md-12">
+	<div class="col-md-5">
+		<h2><%= @task.description %></h2> 
+		<ul>
+			<li><strong>Creado el: </strong><%= @task.created_at.strftime("%d-%m-%Y") %></li>
+		</ul>
+		<h2>Actividades (<%= @task.activities.count %>)</h2>
+		<table class="table table-hover">
+			<tr>
+				<th>Fecha</th> 
+			  <th>Duración</th>
+			  <th>Descripción</th>
+			</tr>
+			<%= render @task.activities%>
+		</table>
+	</div>
+	<div class="col-md-5">
+		<h2>Agregar Actividades</h2>
+		<%= render "activities/form" %>
+	</div>
+</div>

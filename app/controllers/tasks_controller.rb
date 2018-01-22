@@ -1,11 +1,11 @@
 class TasksController < ApplicationController
   
   #Validating user for controller actions
-  before_action :authenticated_user!
+  before_action :authenticate_user!, except: [:index_json, :index_json_user]
 
   #list all tasks by user and order by creation date
   def index
-  	@tasks = Task.all.order("created_at DESC")
+  	@tasks = current_user.tasks.order("created_at DESC")
   end
 
   #Render view to create a new task
@@ -28,14 +28,14 @@ class TasksController < ApplicationController
 
   #Show and specific task with activities
   def show
-  	@task = Task.find(:params[:id])
+  	@task = Task.find(params[:id])
   end
 
   private
 
   	#Define validate argument for task
   	def task_params
-  		params.require(:task).permit(:description)
+  		params.require(:task).permit(:description, :user_id)
   	end
 
 end

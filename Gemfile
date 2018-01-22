@@ -16,6 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -27,6 +28,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise' 
 #Use bootstrap for style
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
