@@ -17,39 +17,17 @@
 
 
 * **Configuración de Rails en windows:**
-    * $ se debe modificar el archivo database.yml ubicado en la carpeta config con el username y contraseña de la base de datos MYSQL a ejecutar el proyecto
-    * $ rake db:create (Crea la base de datos)
-    * $ rake db:migrate (Migra las tablas y campos a la base de datos)
-    * $ bundle install (Instala las gemas 'lebrerias' utilizadas en la implementación)
-    * $ rails s -b (host donde correrta el aplicatico) -p (puerto donde correra el aplicativo) -d (Corre como un proceso en el servidot)
-
+    * Se debe acceder a la pagina web https://rubyinstaller.org/ e instalar la última version de Ruby, tener en cuenta si el eqipo es x86 o x64
+    * Al final de la instalación se debe clickear en MSYS2 para instalar el plugin de gestión de gemas para windows y seleccionar la opción 1 - MSYS2 base installation
+    * Se recomienda ejecutar el proyecto en un ambiente base linux.
+    
 
 * **Antes de correr el proyecto:**
-    * $ se debe modificar el archivo database.yml ubicado en la carpeta config con el username y contraseña de la base de datos MYSQL a ejecutar el proyecto
+    * Se debe modificar el archivo database.yml ubicado en la carpeta config con el username y contraseña de la base de datos MYSQL a ejecutar el proyecto
+    * $ bundle install (Instala las gemas 'lebrerias' utilizadas en la implementación)
     * $ rake db:create (Crea la base de datos)
     * $ rake db:migrate (Migra las tablas y campos a la base de datos)
-    * $ bundle install (Instala las gemas 'lebrerias' utilizadas en la implementación)
-    * $ rails s -b (host donde correrta el aplicatico) -p (puerto donde correra el aplicativo) -d (Corre como un proceso en el servidot)
+    * $ rails s (Corre el aplicativo por defecto en la ruta https://localhost:3000 )
 
 
-* **Documentación API:**
-    * Endpoint que regresa json de TODOS los preseleccionados /api/v1/preselecteds.json
-    * Endpoint que regresa json de la información de UN registrado /api/v1/preselecteds/[id].json
-    * Datos para la autentificación del API: user:admin, password:QazWsx1997.
-    * Ejemplo de petición con curl: curl http://localhost:3000/api/v1/ddgree_preselecteds.json -u 'admin:QazWsx1997'
-
-
-
-* **Formato documento de excel para la carga de pre-registrados:**
-    * primer campo de la primera fila: "Cedula"
-    * segundo campo de la primera fila: "Fondo"
-    * a partir de estos dos encabezados, llenar con los datos correspondientes
-
-
-* **Fecha de lanzamiento:** Junio 2017
-
-
-* **Lugar:** (Sapiencia) Medellín Colombia
-
-
-* **Contacto:** desarrolladores: informatica@sapiencia.gov.co (Wilmer Jaramillo), carlos.agudelo@sapiencia.gov.co (Carlos Agudelo), sebasdeldi@hotmail.com (Sebastian Delgado)
+* **Contacto:** wilmercollege@gmail.com (Wilmer Jaramillo)
